@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+
+    <style>
+
+.accordion__button{
+    display: block;
+    height: 350px;
+    width: 90%;
+    margin: 0 5%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, rgba(21,38,62,0.6) 10%,rgba(21,38,62,0.6) 100%), url(/img/bgviagem4.jpeg);
+    color: black;
+    transition: background 0.2s;
+}
+
+.accordion__button::after {
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+    bottom: 10px;
+    right: 20px;
+}
+
+.accordion__button--active::after {background: #5555;}
+.accordion__button--active::after {content: '\25b4'}
+
+.accordion__content {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0px 0 0px;
+    transition: max-height 0.5s;
+    background-color: #15263e;
+    color: #ffff;
+    width: 90%;
+    margin: 0 5%;
+}
+
+.accordion__content p {
+    margin: 20px 5%;
+    width: 90%;
+    font-size: 15px;
+    line-height: 20px;
+}
+   
+    </style>
+
+</head>
+<body>
+  
+    <section class="accordion container">
+        
+        <button type="button" class="accordion__button">Expand</button>
+      
+        <div class="accordion__content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quia officiis, reiciendis ratione alias laboriosam corrupti, harum perferendis eum eveniet, aperiam eius ab facere ex voluptate quisquam fugit rerum voluptates?</p>
+        </div>
+
+    </section>
+
+    <script>
+        document.querySelectorAll('.accordion__button').forEach(button =>{
+            button.addEventListener('click', () =>{
+                const accordionContent = button.nextElementSibling;
+
+                button.classList.toggle('accordion__button--active');
+
+                if (button.classList.contains('accordion__button--active')){
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                } else {
+
+                    accordionContent.style.maxHeight = 0; 
+                }
+
+            });
+
+        });
+    </script>
+
+
+</body>
+</html>
