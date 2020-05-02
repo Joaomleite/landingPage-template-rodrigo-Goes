@@ -45,6 +45,39 @@ window.addEventListener('load',function(){
 
     });
 
+    document.addEventListener('scroll',function(){
+
+        const rolagem= window.scrollY;
+        const nav = document.querySelector('header');
+
+        if (rolagem >= 100){
+
+            nav.style = 'background-color: #15263e !important;';
+        } else{
+
+            nav.style = 'background-color: transparent !important;';
+        }
+
+    });
+
+    document.querySelector('#btn-mobile').addEventListener('click',function(){
+        
+        const btn = document.querySelector('#btn-mobile');
+
+        btn.classList.toggle('btn--active');
+        const bar = document.querySelector('.nav-mobile ul');
+        
+        if(btn.classList.contains('btn--active')){
+
+            bar.style.maxHeight = bar.scrollHeight + 'px';
+        } else {
+            bar.style.maxHeight = 0;
+        }
+
+
+
+    });
+
  });
 
 function VerificaCampo(){

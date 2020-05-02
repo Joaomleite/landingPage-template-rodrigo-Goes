@@ -60,6 +60,9 @@ body{
     position: relative;
 }
 
+.bg-header{
+    background-color: #15263e !important;
+}
 header{
     position: fixed;
     top: 0;
@@ -67,37 +70,52 @@ header{
     width: 100%;
     z-index: 2;
     height: 70px;
-    background-color: #15263e;
+    background-color: transparent;
     padding: 0 0 2px;
-
-}
-nav {
-    text-align: center;
-}
-
-nav li{
-
-    display: inline;
-    display: inline-block;
-    margin: 0 0px 0px;
-    box-sizing: border-box;
+    transition: background-color 0.5s;
   
 }
 
-nav a{
+.nav-desktop li{
+
+    display: inline;
+    display: inline-block;
+    box-sizing: border-box;
+
+}
+
+.nav-desktop{
+    text-align: right;
+}
+
+.nav-desktop h2{
+    float: left;
+    font-size: 2.5em;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #45bb8a;
+    cursor: pointer;
+}
+.nav-desktop a{
+    
     font-size: 1.5em;
     text-decoration: none;
     color: white;
     line-height: 70px;
     text-transform: uppercase;
-    padding: 25px 30px 25px;
+    padding: 25px 40px 25px;
     box-sizing: border-box;
 
 }
 
-nav a:hover{
+.nav-desktop a:hover{
     border-bottom: 3px solid #45bb8a ;
 
+}
+
+.nav-mobile{
+    display: none;
 }
 
 
@@ -1253,6 +1271,7 @@ Media Queries
         display: none;
     }
     header{
+       
         width: 100%;
 
     }
@@ -1278,11 +1297,65 @@ Media Queries
         font-size: 3.0em;
     }
 
-    nav a{
+    .nav-desktop{
+        display: none;
+    }
 
-        padding: 25px 15px 25px;
+    .nav-mobile{
+        display: block;
+    }
+
+
+    .nav-mobile ul{
+        position: absolute;
+        width: 100%;
+        top: 72px;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 0.5s;
+    }
+
+    .btn--active{
+        color: #45bb8a;
+    }
+    .nav-mobile h2{
+        font-size: 2.3em;
+        color: #45bb8a;
+        line-height: 72px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-left: 30px;
+        float: left;
+    }
+    .nav-mobile i{
+        float: right;
+        font-size: 2.5em;
+        color: white;
+        line-height: 70px;
+        margin-right: 30px;
+    }
+    .nav-mobile li{
+        text-align: center;
+        display: block;
+        background-color: #fff;
+        padding: 20px 0;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .nav-mobile li:active{
+        background-color: #f1f1f1;
 
     }
+    .nav-mobile a{
+        text-decoration: none;
+        font-size: 1.5em;
+        color: #15263e;
+        font-weight: bold;
+        text-transform: uppercase;
+        
+    }
+
+
 
     .h2-up{
         display: none;
