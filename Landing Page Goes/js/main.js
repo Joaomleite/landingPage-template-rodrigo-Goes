@@ -76,7 +76,7 @@ window.addEventListener('load',function(){
         }
     });
 
-    const menuItens = document.querySelectorAll('header a');
+    const menuItens = document.querySelectorAll('.menu a');
 
     menuItens.forEach(item =>{
 
