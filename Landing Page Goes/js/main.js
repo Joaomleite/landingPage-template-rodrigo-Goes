@@ -68,9 +68,10 @@ window.addEventListener('load',function(){
         const bar = document.querySelector('.nav-mobile ul');
         
         if(btn.classList.contains('btn--active')){
-
+            btn.className ='fas fa-times btn--active'
             bar.style.maxHeight = bar.scrollHeight + 'px';
         } else {
+            btn.className ='fas fa-bars'
             bar.style.maxHeight = 0;
         }
 
