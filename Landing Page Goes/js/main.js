@@ -2,7 +2,6 @@
 window.addEventListener('load',function(){
 
 
-
     slide();
 
     document.querySelector('#btnf').addEventListener('click',function(){
@@ -50,12 +49,12 @@ window.addEventListener('load',function(){
         const rolagem= window.scrollY;
         const nav = document.querySelector('header');
 
-        if (rolagem >= 100){
-
-            nav.style = 'background-color: #15263e !important;';
-        } else{
+        if (rolagem < 100){
 
             nav.style = 'background-color: transparent !important;';
+        } else{
+
+            nav.style = 'background-color: #15263e !important;';
         }
 
     });

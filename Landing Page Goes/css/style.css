@@ -49,10 +49,14 @@ table {
 /* ----------------------------------------------------- */
 
 
-body{
-    font-size: 10px;
-
+html, body {
+    overflow-x: hidden;
 }
+body {
+    font-size: 10px;
+    position: relative
+}
+
 
 .container{
     width: 1280px;
@@ -70,7 +74,6 @@ header{
     width: 100%;
     z-index: 2;
     height: 70px;
-    background-color: transparent;
     padding: 0 0 2px;
     transition: background-color 0.5s;
   
@@ -262,13 +265,13 @@ header{
 .perfil{
     
  
-    margin: 30px 1% 0;
-    width: 98%;
+    margin: 30px 1.5% 0;
+    width: 94%;
     background-color: #15263e;
 
 
     overflow: hidden !important;
-    padding: 30px 20px;
+    padding: 30px 1.5%;
     border-radius: 10px;
     position: relative;   
 }
@@ -496,8 +499,8 @@ header{
 .marcas img{
 
     float: left;
-    width: 19%;
-    margin: 0px 3% 120px;
+    width: 17.33%;
+    margin: 0px 8% 120px;
 }
 
 .goesmidia i {
@@ -841,10 +844,55 @@ footer i{
 }
 
 
+
 /*----------------------------------------------
 Media Queries
 ----------------------------------------------*/
+@media screen and (max-width: 1280px){
+    nav h2{
+        margin-left: 20px;
+    }
 
+    html, body {
+        overflow-x: hidden;
+    }
+    body {
+        position: relative
+    }
+
+    .container{
+        width: 100%;
+    }
+    .intro-slideshow{
+
+        width: 100%;;
+    }
+    .box3 p{
+        width: 46%;
+        margin: 20px 2%;
+
+    }
+
+    .perfil{
+        width: 94%;
+        margin: 30px 1.5% ;
+        padding: 20px 1.5%;
+    }
+
+    .box4{
+       width: 40%;
+       margin: 0 0%;
+       margin-left: 15px;
+    }
+
+    .videoBox iframe{
+        width: 40%;
+        margin: 40px 5%;
+    }
+  
+    
+
+}
 
 @media screen and (max-width: 980px){
    
@@ -1386,8 +1434,8 @@ Media Queries
     .marcas img{
 
         float: left;
-        width: 60%;
-        margin: 0px 20% 50px;
+        width: 50%;
+        margin: 0px 25% 50px;
     }
     
     
