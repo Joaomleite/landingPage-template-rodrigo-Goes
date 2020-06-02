@@ -499,8 +499,8 @@ header{
 .marcas img{
 
     float: left;
-    width: 12.66%;
-    margin: 0px 2.0% 120px;
+    width: 10.28%;
+    margin: 0px 2% 120px;
 }
 
 .goesmidia i {
@@ -1537,7 +1537,7 @@ Media Queries
     font-weight: bold;
     position: absolute;
     bottom: 10px;
-    left: 20px;
+    left: 10px;
 }
 .accordion__button::after {
     content: '\25be';
